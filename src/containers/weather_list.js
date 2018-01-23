@@ -9,26 +9,29 @@ class WeatherList extends Component {
             <tr key={element.city.id}>
                 <td>{element.city.name}</td>
                 <td>
-                    <Sparklines>
+                    <Sparklines
                         height={120}
                         width={180}
                         data={element.list.map(weather => weather.main.temp)}
+                    >
                         <SparklinesLine color="rgba(255, 0, 0, .3)" />
                     </Sparklines>
                 </td>
                 <td>
-                    <Sparklines>
+                    <Sparklines
                         height={120}
                         width={180}
                         data={element.list.map(weather => weather.main.pressure)}
+                    >
                         <SparklinesLine color="rgba(0, 255, 0, .3)" />
                     </Sparklines>
                 </td>
                 <td>
-                    <Sparklines>
+                    <Sparklines
                         height={120}
                         width={180}
                         data={element.list.map(weather => weather.main.humidity)}
+                    >
                         <SparklinesLine color="rgba(0, 0, 255, .3)" />
                     </Sparklines>
                 </td>
